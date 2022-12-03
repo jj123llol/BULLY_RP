@@ -1,3 +1,14 @@
+
+function teleportTO(placeCFrame)
+    local plyr = game.Players.LocalPlayer;
+    if plyr.Character then
+        plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+    end
+end
+
+
+
+
 getgenv().Spamlocker = true;
 getgenv().VoiceActivated = true;
 
@@ -72,3 +83,26 @@ end
 )
 end
 })
+
+local Tab = Window:MakeTab({
+	Name = "teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Tp to group room",
+	Callback = function()
+      		teleportTO(game:GetService("Workspace").SnackMachine.Giver.Outside.Part.CFrame)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Tp to owner spawn",
+	Callback = function()
+      		teleportTO(game:GetService("Workspace")["Owner Spawn"].CFrame)
+  	end    
+})
+
+
+
