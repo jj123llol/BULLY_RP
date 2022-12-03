@@ -93,7 +93,7 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
 	Name = "Tp to group room",
 	Callback = function()
-      		teleportTO(game:GetService("Workspace").SnackMachine.Giver.Outside.Part.CFrame)
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-198.600037, 429.899994, 5515.6001, -1, 0, 0, 0, 1, 0, 0, 0, -1)
   	end    
 })
 
@@ -104,5 +104,16 @@ Tab:AddButton({
   	end    
 })
 
-
+Tab:AddButton({
+	Name = "Tp to secret room",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-82.2578125, 451.800171, 5529.99072, -0.799662828, 3.5737731e-08, -0.600449264, 5.41002514e-08, 1, -1.25309993e-08, 0.600449264, -4.25050324e-08, -0.799662828)
+  	end    
+})
+Tab:AddButton({
+	Name = "Tp to school",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4.16020346, 80.8991699, -39.8006668, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+  	end    
+})
 
