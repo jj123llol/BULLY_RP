@@ -1,0 +1,74 @@
+getgenv().Spamlocker = true;
+getgenv().VoiceActivated = true;
+
+
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Bully rp--by jude/rev", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "Random shit",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Claim locker",
+	Callback = function()
+      			OrionLib:MakeNotification({
+	Name = "HEY",
+	Content = "Click on a locker in the school...easy",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+  	end    
+})
+
+Tab:AddToggle({
+	Name = "spam locker",
+	Default = (bool),
+	Callback = function(bool)
+		getgenv().Spamlocker = bool
+		print(bool)
+		if bool then
+		Spamlocker()
+		end
+	end    
+    
+})
+
+
+function Spamlocker()
+    while getgenv().Spamlocker == true do
+ wait()
+game:GetService("ReplicatedStorage").InteractiveLockers.Remotes.OpenOrCloseLocker:FireServer()
+end
+
+end
+
+
+Tab:AddButton({
+	Name = "Voice activated locker (say open to open,close to close)",
+	Callback = function()
+      		    local chatEvents = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents")
+local messageDoneFiltering = chatEvents:WaitForChild("OnMessageDoneFiltering")
+
+messageDoneFiltering.OnClientEvent:Connect(function(message)
+ local msg = message.Message or ""
+ 
+ 
+ 
+ print(msg)
+  if msg:lower():sub(1,13) == "open" then
+game:GetService("ReplicatedStorage").InteractiveLockers.Remotes.OpenOrCloseLocker:FireServer()
+  end
+
+  if msg:lower():sub(1,14) == "close" then
+game:GetService("ReplicatedStorage").InteractiveLockers.Remotes.OpenOrCloseLocker:FireServer()
+
+  end
+end
+)
+end
+})
