@@ -1,4 +1,3 @@
-
 function teleportTO(placeCFrame)
     local plyr = game.Players.LocalPlayer;
     if plyr.Character then
@@ -11,6 +10,7 @@ end
 
 getgenv().Spamlocker = true;
 getgenv().VoiceActivated = true;
+getgenv().Hate = true;
 
 
 
@@ -48,6 +48,21 @@ Tab:AddToggle({
 	end    
     
 })
+
+
+Tab:AddToggle({
+	Name = "Change rp name to i hate n words song (Hate by Kahlil4mb, zee!)",
+	Default = (bool),
+	Callback = function(bool)
+		getgenv().Hate  = bool
+		print(bool)
+		if bool then
+		Hate()
+		end
+	end    
+    
+})
+
 
 
 function Spamlocker()
@@ -117,3 +132,93 @@ Tab:AddButton({
   	end    
 })
 
+
+
+
+function Hate()
+    while getgenv().Hate == true do
+            wait(0.5)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("I 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas,,")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("i 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("i 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas (п¡🅶 gas)")
+   wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("I 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas, ")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("i 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas,")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("i 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas (п¡🅶 gas)")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("🅷ате 'ем, ¡ muтhа __ckin 🅷ате 'ем")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("these ")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("п¡🅶 gas ¡s sоме")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("🅱 𐌜i 𐌜t ___ 𐌜e𐌜s")
+   wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("I wоndеr whо шоuld сlаiм 'ем,")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("п¡🅶 gas")
+  wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("🅷ате 'ем, ¡ muтhа __ckin 🅷ате 'ем")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("all тhеse  ")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("п¡🅶 gas")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("Likе who the _u_к would claim 'em,")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("п¡🅶 gas")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("I 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas,,")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("i 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("i 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas (п¡🅶 gas)")
+   wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("I 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas, ")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("i 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas,")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("i 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas (п¡🅶 gas)")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("🅷ате 'ем, ¡ muтhа __ckin 🅷ате 'ем")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("these ")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("п¡🅶 gas ¡s sоме")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("🅱 𐌜i 𐌜t ___ 𐌜e𐌜s")
+   wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("I wоndеr whо шоuld сlаiм 'ем,")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("п¡🅶 gas")
+  wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("🅷ате 'ем, ¡ muтhа __ckin 🅷ате 'ем")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("all тhеse  ")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("п¡🅶 gas")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("Likе who the _u_к would claim 'em,")
+    wait(0.5)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("п¡🅶 gas")
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("I 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas,,")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("i 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("i 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas (п¡🅶 gas)")
+   wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("I 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas, ")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("i 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas,")
+    wait(1)
+    game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("i 🅷ате п¡🅶 gas, i 🅷ате п¡🅶 gas (п¡🅶 gas)")
+    
+    
+    end
+end
+
+        
