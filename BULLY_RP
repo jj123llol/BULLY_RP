@@ -9,7 +9,7 @@ function teleportTO(placeCFrame)
 end
 
 
-
+getgenv().BlockDoor = true;
 getgenv().NoMoreTp = true;
 getgenv().NoMoreTpv2 = true;
 getgenv().Spamlocker = true;
@@ -67,6 +67,20 @@ Tab:AddToggle({
 		print(bool)
 		if bool then
 		Hate()
+		end
+	end    
+    
+})
+
+
+Tab:AddToggle({
+	Name = "Spam tp block door",
+	Default = (bool),
+	Callback = function(bool)
+		getgenv().BlockDoor  = bool
+		print(bool)
+		if bool then
+		BlockDoor()
 		end
 	end    
     
@@ -312,5 +326,21 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-141.545
 
 end
 end
+end
+end
+
+
+
+function BlockDoor()
+while getgenv().BlockDoor == true do
+    wait()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2.96427131, 63.3200569, 71.4399185, -0.99997288, 1.04027169e-08, -0.00736289192, 1.10419185e-08, 1, -8.6773241e-08, 0.00736289192, -8.68521894e-08, -0.99997288)
+    wait()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6.63092041, 63.3200569, 71.4437103, -0.999958515, -7.34026173e-09, -0.00910972245, -7.85816479e-09, 1, 5.68159209e-08, 0.00910972245, 5.6885149e-08, -0.999958515)
+    wait()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9.29678059, 63.3200569, 71.4632645, -0.99997288, -1.19687504e-08, -0.00736288913, -1.2630534e-08, 1, 8.9834451e-08, 0.00736288913, 8.99250097e-08, -0.99997288)
+    wait()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10.6299963, 63.3200569, 71.4809036, -0.99977237, 1.72317494e-10, -0.0213350523, 2.90049401e-10, 1, -5.51514434e-09, 0.0213350523, -5.52007728e-09, -0.99977237)
+    wait()
 end
 end
