@@ -1,3 +1,6 @@
+
+
+
 function teleportTO(placeCFrame)
     local plyr = game.Players.LocalPlayer;
     if plyr.Character then
@@ -7,7 +10,8 @@ end
 
 
 
-
+getgenv().NoMoreTp = true;
+getgenv().NoMoreTpv2 = true;
 getgenv().Spamlocker = true;
 getgenv().VoiceActivated = true;
 getgenv().Hate = true;
@@ -48,6 +52,11 @@ Tab:AddToggle({
 	end    
     
 })
+
+
+
+
+
 
 
 Tab:AddToggle({
@@ -98,6 +107,37 @@ end
 )
 end
 })
+
+Tab:AddParagraph("Okay so,","This works but if they spam jump or run into it over and over,it leaves a split second for them to be able to teleport.")
+
+Tab:AddToggle({
+	Name = "Make it so they cant leave spawn/break teleporter",
+	Default = (bool),
+	Callback = function(bool)
+		getgenv().NoMoreTp = bool
+		print(bool)
+		if bool then
+		NoaMoreTp()
+		end
+	end    
+    
+})
+
+
+Tab:AddToggle({
+	Name = "Make it so they cant leave spawn/break teleporter v2",
+	Default = (bool),
+	Callback = function(bool)
+		getgenv().NoMoreTpv2 = bool
+		print(bool)
+		if bool then
+		NoaMoreTpv2()
+		end
+	end    
+    
+})
+
+
 
 local Tab = Window:MakeTab({
 	Name = "teleports",
@@ -221,4 +261,56 @@ function Hate()
     end
 end
 
-        
+
+function NoaMoreTp()
+while getgenv().NoMoreTp == true do
+    
+    for _,v in pairs(game:GetService("Workspace").OldBuildingTp2:GetDescendants()) do
+if v:IsA("TouchTransmitter") then
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0) --0 is touch
+wait()
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1) -- 1 is untouch
+
+
+    
+    
+teleportTO(game:GetService("Workspace").OldBuildingTp2.CFrame)
+wait()
+teleportTO(game:GetService("Workspace").Part.CFrame)
+end
+end
+end
+end
+
+
+
+function NoaMoreTpv2()
+while getgenv().NoMoreTpv2 == true do
+    
+    for _,v in pairs(game:GetService("Workspace").OldBuildingTp2:GetDescendants()) do
+if v:IsA("TouchTransmitter") then
+firetouchinterest(game.Players.LocalPlayer.Character.Torso, v.Parent, 0) --0 is touch
+wait()
+firetouchinterest(game.Players.LocalPlayer.Character.Torso, v.Parent, 1) -- 1 is untouch
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-141.5457, 430.599976, 5485.75049, -0.999583125, -7.39692974e-09, 0.0288711432, -7.10421233e-09, 1, 1.02413376e-08, -0.0288711432, 1.0031961e-08, -0.999583125)
+
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0) --0 is touch
+wait()
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1) -- 1 is untouch
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-141.5457, 430.599976, 5485.75049, -0.999583125, -7.39692974e-09, 0.0288711432, -7.10421233e-09, 1, 1.02413376e-08, -0.0288711432, 1.0031961e-08, -0.999583125)
+
+firetouchinterest(game.Players.LocalPlayer.Character.Head, v.Parent, 0) --0 is touch
+wait()
+firetouchinterest(game.Players.LocalPlayer.Character.Head, v.Parent, 1) -- 1 is untouch
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-141.5457, 430.599976, 5485.75049, -0.999583125, -7.39692974e-09, 0.0288711432, -7.10421233e-09, 1, 1.02413376e-08, -0.0288711432, 1.0031961e-08, -0.999583125)
+    
+    
+
+
+end
+end
+end
+end
