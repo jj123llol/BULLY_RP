@@ -1,5 +1,4 @@
 
-
 function teleportTO(placeCFrame)
     local plyr = game.Players.LocalPlayer;
     if plyr.Character then
@@ -14,6 +13,7 @@ getgenv().NoMoreTpv2 = true;
 getgenv().Spamlocker = true;
 getgenv().VoiceActivated = true;
 getgenv().Hate = true;
+getgenv().Spamvending = true;
 
 
 
@@ -66,6 +66,19 @@ Tab:AddToggle({
 		print(bool)
 		if bool then
 		Hate()
+		end
+	end    
+    
+})
+
+Tab:AddToggle({
+	Name = "Spam vending machine",
+	Default = (bool),
+	Callback = function(bool)
+		getgenv().Spamvending = bool
+		print(bool)
+		if bool then
+		Spamvend()
 		end
 	end    
     
@@ -374,5 +387,29 @@ chara.HumanoidRootPart.CFrame = origin
 
 end
 end
+end
+end
+
+function Spamvend()
+while getgenv().Spamvending == true do
+            wait()
+            local clickdetector = game:GetService("Workspace").SnackMachine.Selection1.ClickDetector
+            fireclickdetector(clickdetector)
+            local clickdetector = game:GetService("Workspace").SnackMachine.Selection2.ClickDetector
+            fireclickdetector(clickdetector)
+            local clickdetector = game:GetService("Workspace").SnackMachine.Selection3.ClickDetector
+            fireclickdetector(clickdetector)
+            local clickdetector = game:GetService("Workspace").SnackMachine.Selection4.ClickDetector
+            fireclickdetector(clickdetector)
+            local clickdetector = game:GetService("Workspace").SnackMachine.Selection5.ClickDetector
+            fireclickdetector(clickdetector)
+            local clickdetector = game:GetService("Workspace").SnackMachine.Selection6.ClickDetector
+            fireclickdetector(clickdetector)
+            local clickdetector = game:GetService("Workspace").SnackMachine.Selection7.ClickDetector
+            fireclickdetector(clickdetector)
+            local clickdetector = game:GetService("Workspace").SnackMachine.Selection8.ClickDetector
+            fireclickdetector(clickdetector)
+            
+
 end
 end
