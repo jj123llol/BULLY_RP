@@ -1,6 +1,5 @@
 
 
-
 function teleportTO(placeCFrame)
     local plyr = game.Players.LocalPlayer;
     if plyr.Character then
@@ -8,7 +7,7 @@ function teleportTO(placeCFrame)
     end
 end
 
-
+getgenv().NoMoreTpV3 = true;
 getgenv().BlockDoor = true;
 getgenv().NoMoreTp = true;
 getgenv().NoMoreTpv2 = true;
@@ -146,6 +145,19 @@ Tab:AddToggle({
 		print(bool)
 		if bool then
 		NoaMoreTpv2()
+		end
+	end    
+    
+})
+
+Tab:AddToggle({
+	Name = "Make it so they cant leave spawn/break teleporter v3",
+	Default = (bool),
+	Callback = function(bool)
+		getgenv().NoMoreTpV3 = bool
+		print(bool)
+		if bool then
+		V3()
 		end
 	end    
     
@@ -342,5 +354,25 @@ while getgenv().BlockDoor == true do
     wait()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10.6299963, 63.3200569, 71.4809036, -0.99977237, 1.72317494e-10, -0.0213350523, 2.90049401e-10, 1, -5.51514434e-09, 0.0213350523, -5.52007728e-09, -0.99977237)
     wait()
+end
+end
+
+function V3()
+while getgenv().NoMoreTpV3 == true do
+local chara = game.Players.LocalPlayer.Character
+            local origin = chara.HumanoidRootPart.CFrame
+            wait()
+            
+            for _,v in pairs(game:GetService("Workspace").OldBuildingTp2:GetDescendants()) do
+if v:IsA("TouchTransmitter") then
+firetouchinterest(game.Players.LocalPlayer.Character.Torso, v.Parent, 0) --0 is touch
+wait()
+firetouchinterest(game.Players.LocalPlayer.Character.Torso, v.Parent, 1) -- 1 is untouch
+
+chara.HumanoidRootPart.CFrame = origin
+
+
+end
+end
 end
 end
