@@ -14,6 +14,7 @@ getgenv().Spamlocker = true;
 getgenv().VoiceActivated = true;
 getgenv().Hate = true;
 getgenv().Spamvending = true;
+getgenv().Crash = true;
 
 
 
@@ -111,6 +112,19 @@ Tab:AddToggle({
     
 })
 
+Tab:AddButton({
+	Name = "Get spray paint",
+	Callback = function()
+for _,v in pairs(game:GetService("Workspace")["Spray Can Giver"].Giver:GetDescendants()) do
+if v:IsA("TouchTransmitter") then
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0) --0 is touch
+wait()
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1) -- 1 is untouch
+end    
+end
+end
+
+})
 
 
 function Spamlocker()
@@ -187,6 +201,31 @@ Tab:AddToggle({
 		end
 	end    
     
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Crashing"
+})
+
+
+Tab:AddToggle({
+	Name = "Grab tools on ground",
+	Default = (bool),
+	Callback = function(bool)
+		getgenv().Crash = bool
+		print(bool)
+		if bool then
+		Grabtools()
+		end
+	end    
+    
+})
+Tab:AddButton({
+	Name = "Drop tools",
+	Callback = function()
+      		Droptools()
+  	end    
 })
 
 
@@ -312,6 +351,9 @@ function Hate()
     
     end
 end
+
+
+
 
 
 function NoaMoreTp()
@@ -1338,4 +1380,121 @@ while getgenv().AUTONameChanger == true do
 end
 end
 
+   function Grabtools()
+    while getgenv().Crash == true do
+
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-178.680634, 430.599976, 5512.84131, 0.999944448, -6.72424605e-08, -0.0105380425, 6.67226701e-08, 1, -4.96764052e-08, 0.0105380425, 4.89705201e-08, 0.999944448)
     
+    end
+end
+
+
+
+
+function Droptools()
+    
+    for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+   if v:IsA("Tool") and v.Name == 'Bloxiade' then
+    v.Parent = game.Players.LocalPlayer.Character
+    v.Parent = game.Workspace
+end
+end
+
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+   if v:IsA("Tool") and v.Name == 'Bloxiade' then
+    v.Parent = game.Players.LocalPlayer.Character
+    v.Parent = game.Workspace
+end
+end
+wait(2)
+task.wait()
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+   if v:IsA("Tool") and v.Name == 'Cake' then
+    v.Parent = game.Players.LocalPlayer.Character
+    v.Parent = game.Workspace
+end
+end
+wait(2)
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+   if v:IsA("Tool") and v.Name == 'Bloxiade' then
+    v.Parent = game.Players.LocalPlayer.Character
+    v.Parent = game.Workspace
+end
+end
+task.wait()
+wait(2)
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+   if v:IsA("Tool") and v.Name == 'Waffle' then
+    v.Parent = game.Players.LocalPlayer.Character
+    v.Parent = game.Workspace
+end
+end
+
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+   if v:IsA("Tool") and v.Name == 'Bloxiade' then
+    v.Parent = game.Players.LocalPlayer.Character
+    v.Parent = game.Workspace
+end
+end
+task.wait()
+
+
+wait(2)
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+   if v:IsA("Tool") and v.Name == 'WitchBrew' then
+    v.Parent = game.Players.LocalPlayer.Character
+    v.Parent = game.Workspace
+end
+end
+wait(2)
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+   if v:IsA("Tool") and v.Name == 'SpaceSandwich' then
+    v.Parent = game.Players.LocalPlayer.Character
+    v.Parent = game.Workspace
+end
+end
+task.wait()
+
+wait(2)
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+   if v:IsA("Tool") and v.Name == 'StarbloxLatte' then
+    v.Parent = game.Players.LocalPlayer.Character
+    v.Parent = game.Workspace
+end
+end
+
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+   if v:IsA("Tool") and v.Name == 'SpaceSandwich' then
+    v.Parent = game.Players.LocalPlayer.Character
+    v.Parent = game.Workspace
+end
+end
+
+wait(2)
+task.wait()
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+   if v:IsA("Tool") and v.Name == 'BloxyCola' then
+    v.Parent = game.Players.LocalPlayer.Character
+    v.Parent = game.Workspace
+end
+end
+
+
+task.wait()
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+   if v:IsA("Tool") and v.Name == 'Cheezburger' then
+    v.Parent = game.Players.LocalPlayer.Character
+    v.Parent = game.Workspace
+end
+end
+
+
+
+end
+
