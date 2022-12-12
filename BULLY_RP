@@ -214,7 +214,7 @@ end
 	Time = 10
 })
         
-	
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/jj123llol/My-personal-admin/main/admin",true))()
 	
 	
 	
