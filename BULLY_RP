@@ -1,4 +1,3 @@
-
 function teleportTO(placeCFrame)
     local plyr = game.Players.LocalPlayer;
     if plyr.Character then
@@ -7,7 +6,7 @@ function teleportTO(placeCFrame)
 end
 
 
-
+getgenv().BeAnnoying = true;
 
 getgenv().Spamlocker = true;
 getgenv().VoiceActivated = true;
@@ -45,6 +44,21 @@ Tab:AddToggle({
 		print(bool)
 		if bool then
 		Spamlocker()
+		end
+	end    
+    
+})
+
+
+
+Tab:AddToggle({
+	Name = "Spam drums/be annoying",
+	Default = (bool),
+	Callback = function(bool)
+		getgenv().BeAnnoying = bool
+		print(bool)
+		if bool then
+		BeAnnoying()
 		end
 	end    
     
@@ -206,6 +220,26 @@ end
 end
 end
 
+
+function BeAnnoying()
+    while getgenv().BeAnnoying == true do
+        wait()
+local clickdetector = game:GetService("Workspace")["Custom heavy drum"].Crash.ClickDetector -- path to the click detector
+
+fireclickdetector(clickdetector)
+
+
+local clickdetector = game:GetService("Workspace")["Custom heavy drum"].Hat.Model["crash cymbal"].ClickDetector -- path to the click detector
+
+fireclickdetector(clickdetector)
+
+
+
+end
+end
+
+
+
         
         OrionLib:MakeNotification({
 	Name = "CREDITS",
@@ -214,9 +248,8 @@ end
 	Time = 10
 })
         
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/jj123llol/My-personal-admin/main/admin",true))()
-	
-	
+        
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/jj123llol/My-personal-admin/main/admin",true))()
 	
 	
 	
