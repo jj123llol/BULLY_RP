@@ -1,3 +1,10 @@
+--STOP LOOKING AT THE SOURCE CELESTIAL
+
+
+
+
+
+
 function teleportTO(placeCFrame)
     local plyr = game.Players.LocalPlayer;
     if plyr.Character then
