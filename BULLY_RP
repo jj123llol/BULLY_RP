@@ -5,13 +5,14 @@ function teleportTO(placeCFrame)
     end
 end
 
-
+getgenv().Chill = true;
 getgenv().BeAnnoying = true;
-
+getgenv().Hug = true;
 getgenv().Spamlocker = true;
 getgenv().VoiceActivated = true;
 getgenv().CRASH = true;
 getgenv().v3 = true;
+getgenv().rainbow = true;
 
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
@@ -50,6 +51,91 @@ Tab:AddToggle({
 })
 
 
+Tab:AddToggle({
+	Name = "Hug",
+	Default = (bool),
+	Callback = function(bool)
+		getgenv().Hug = bool
+		print(bool)
+		if bool then
+		Hug()
+		end
+	end    
+    
+})
+
+
+
+
+
+Tab:AddToggle({
+	Name = "Free chill emote(reset to get rid of)",
+	Default = (bool),
+	Callback = function(bool)
+		getgenv().Chill = bool
+		print(bool)
+		if bool then
+		Chill()
+		end
+	end    
+    
+})
+
+
+
+function Hug()
+    while getgenv().Hug == true do
+        wait(1)
+        local Anim = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://8627565729"
+local track = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+local HeadThrowACTIVE = true
+
+            if HeadThrowACTIVE then
+                track:Play(.1, 1, 1)
+           end
+    
+end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+function Chill()
+    while getgenv().Chill == true do
+        wait()
+        local Anim = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://6570468098"
+local track = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+local HeadThrowACTIVE = true
+
+            if HeadThrowACTIVE then
+                track:Play(.1, 1, 1)
+           end
+    end    
+end
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
 
 Tab:AddToggle({
 	Name = "Spam drums/be annoying",
@@ -59,6 +145,20 @@ Tab:AddToggle({
 		print(bool)
 		if bool then
 		BeAnnoying()
+		end
+	end    
+    
+})
+
+
+Tab:AddToggle({
+	Name = "Rainbow",
+	Default = (bool),
+	Callback = function(bool)
+		getgenv().rainbow = bool
+		print(bool)
+		if bool then
+		rainbow()
 		end
 	end    
     
@@ -234,10 +334,138 @@ local clickdetector = game:GetService("Workspace")["Custom heavy drum"].Hat.Mode
 fireclickdetector(clickdetector)
 
 
+local clickdetector = game:GetService("Workspace")["Custom heavy drum"].Ride.Model["crash cymbal"].ClickDetector -- path to the click detector
+
+fireclickdetector(clickdetector)
+
 
 end
 end
 
+
+
+function rainbow()
+while getgenv().rainbow == true do
+    local args = {
+    [1] = {
+        ["Category"] = "Pants",
+        ["AssetId"] = "2849337018"
+    }
+}
+
+game:GetService("Players").LocalPlayer.PlayerGui.AvatarEditor.WearItem:FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["Category"] = "Shirt",
+        ["AssetId"] = "2849332932"
+    }
+}
+
+game:GetService("Players").LocalPlayer.PlayerGui.AvatarEditor.WearItem:FireServer(unpack(args))
+wait(1)
+
+    local args = {
+    [1] = {
+        ["Category"] = "Pants",
+        ["AssetId"] = "6529458827"
+    }
+}
+
+game:GetService("Players").LocalPlayer.PlayerGui.AvatarEditor.WearItem:FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["Category"] = "Shirt",
+        ["AssetId"] = "6529457869"
+    }
+}
+
+game:GetService("Players").LocalPlayer.PlayerGui.AvatarEditor.WearItem:FireServer(unpack(args))
+wait(1)
+
+
+    local args = {
+    [1] = {
+        ["Category"] = "Pants",
+        ["AssetId"] = "187583781"
+    }
+}
+
+game:GetService("Players").LocalPlayer.PlayerGui.AvatarEditor.WearItem:FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["Category"] = "Shirt",
+        ["AssetId"] = "187583704"
+    }
+}
+
+game:GetService("Players").LocalPlayer.PlayerGui.AvatarEditor.WearItem:FireServer(unpack(args))
+wait(1)
+
+    local args = {
+    [1] = {
+        ["Category"] = "Pants",
+        ["AssetId"] = "6408329879"
+    }
+}
+
+game:GetService("Players").LocalPlayer.PlayerGui.AvatarEditor.WearItem:FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["Category"] = "Shirt",
+        ["AssetId"] = "6114211067"
+    }
+}
+
+game:GetService("Players").LocalPlayer.PlayerGui.AvatarEditor.WearItem:FireServer(unpack(args))
+wait(1)
+
+
+    local args = {
+    [1] = {
+        ["Category"] = "Pants",
+        ["AssetId"] = "10895356283"
+    }
+}
+
+game:GetService("Players").LocalPlayer.PlayerGui.AvatarEditor.WearItem:FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["Category"] = "Shirt",
+        ["AssetId"] = "10895354871"
+    }
+}
+
+game:GetService("Players").LocalPlayer.PlayerGui.AvatarEditor.WearItem:FireServer(unpack(args))
+wait(1)
+
+    local args = {
+    [1] = {
+        ["Category"] = "Pants",
+        ["AssetId"] = "10895318887"
+    }
+}
+
+game:GetService("Players").LocalPlayer.PlayerGui.AvatarEditor.WearItem:FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["Category"] = "Shirt",
+        ["AssetId"] = "10895317200"
+    }
+}
+
+game:GetService("Players").LocalPlayer.PlayerGui.AvatarEditor.WearItem:FireServer(unpack(args))
+
+
+
+
+end
+end
 
 
         
@@ -247,9 +475,11 @@ end
 	Image = "rbxassetid://4483345998",
 	Time = 10
 })
-        
-        
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/jj123llol/My-personal-admin/main/admin",true))()
-	
-	
-	
+           
+           
+           
+           
+           loadstring(game:HttpGet("https://raw.githubusercontent.com/jj123llol/My-personal-admin/main/admin",true))()
+           
+           
+    
