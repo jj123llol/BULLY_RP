@@ -485,8 +485,9 @@ end
            
            
            
-           
+           -- ADMIN SCRIPTS
            loadstring(game:HttpGet("https://raw.githubusercontent.com/jj123llol/My-personal-admin/main/admin",true))()
-           
+           loadstring(game:HttpGet("https://https://raw.githubusercontent.com/IAmMrNoob/RFE/main/Misc/Script0.lua"))()
+
            
     
